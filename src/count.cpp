@@ -12,5 +12,29 @@ ERROR CASES: Return -1 in error cases.
 NOTES:
 */
 int count(int num1, int num2) {
-	return 0;
+	if (num1 == 0)
+	{
+		return(-1);
+	}
+	 else if (num2 < 0)
+	{
+		return(-1);
+	}
+	else if (num1 > 0 && num2 < 0)
+	{
+		return(-1);
+	}
+	else
+	{
+		int x = num2, y = 0;
+		while (x >=num1)
+		{
+			if (x%num1 == 0)
+			{
+				y++;
+			}
+			x--;
+		}
+		return(y);
+	}
 }
